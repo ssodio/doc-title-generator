@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="form" action="" method="GET">
+        <div class="label-body">
+            <label for="input1">Input 1:</label>
+            <input type="text" id="input1" name="input1">
+        </div>
+        <div class="label-body">
+            <label for="dropdown">Dropdown:</label>
+            <select name="dropdown" id="dropdown">
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
+                <option value="option4">Option 4</option>
+            </select>
+        </div>
+        
+    </form>
+    <button id="submit">Submit</button>
+    <div class="label-body">
+        <p>Formatted Document Title:</p>
+        <p id="final-doc-title"></p>
+    </div>
+    <script>
+        const submitButton = document.getElementById('submit');
+
+        submitButton.addEventListener('click', function () {
+            let input1 = form.input1.value;
+            let input2 = form.dropdown.value;
+
+            let generatedTitle = generateTitle(input1, input2);
+            document.getElementById('final-doc-title').innerText = generatedTitle;
+        });
+
+        function generateTitle(input1, input2) {
+            return input1.concat(" and " + input2);
+        }
+    </script>
+</body>
+
+</html>
