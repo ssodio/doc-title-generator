@@ -1,0 +1,103 @@
+/* FONTS */
+
+@font-face {
+    font-family: Space-Grotesk-Regular;
+    src: url('fonts/Space_Grotesk/static/SpaceGrotesk-Regular.ttf');
+}
+
+@font-face {
+    font-family: Space-Grotesk-Bold;
+    src: url('fonts/Space_Grotesk/static/SpaceGrotesk-Bold.ttf');
+}
+
+/* STYLES */
+
+body {
+    background-color: #2ca6850f;
+    display:flex; flex-direction:column; justify-content:center;
+    min-height:100vh;
+}
+
+.buttons {
+    display: flex;
+    gap: 1em;
+}
+
+.buttons button {
+    font-family: Space-Grotesk-Regular;
+    letter-spacing: 0.015em;
+    font-size: 16px;
+    color: white;
+    border: none;
+    border-radius: 0.4em;
+    padding: 0.6em 1em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+#submit {
+    background-color: #2ca685;
+}
+
+#clear {
+    background-color: #211f20;
+}
+
+.white-box-black-border {
+    background-color: white;
+    border-style: solid;
+    border-color: #211f20;
+    border-width: 1px;
+    border-radius: 0.2em;
+}
+
+h1 {
+    font-family: Space-Grotesk-Bold;
+    letter-spacing: 0.015em;
+    font-size: 24px;
+    color: #211f20;
+    margin: 0px;
+}
+
+.label-body h2 {
+    font-family: Space-Grotesk-Bold;
+    letter-spacing: 0.015em;
+    font-size: 16px;
+    color: #211f20;
+    margin: 0px;
+}
+
+.label-body p, input, select {
+    font-family: Space-Grotesk-Regular;
+    letter-spacing: 0.015em;
+    font-size: 16px;
+    color: #211f20;
+    margin: 0px;
+}
+
+.label-body {
+    display: flex;
+    flex-direction: column;
+    min-width: 24em;
+    gap: 0.2em;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2em;
+}
+
+#form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.4em;
+}
+
+#final-doc-title {
+    padding: 0.6em 1em;
+    min-height: 10em;
+}
