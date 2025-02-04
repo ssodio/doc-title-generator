@@ -10,12 +10,19 @@
     src: url('fonts/Space_Grotesk/static/SpaceGrotesk-Bold.ttf');
 }
 
+@font-face {
+    font-family: Space-Grotesk-Medium;
+    src: url('fonts/Space_Grotesk/static/SpaceGrotesk-Medium.ttf');
+}
+
 /* STYLES */
 
 body {
     background-color: #2ca6850f;
-    display:flex; flex-direction:column; justify-content:center;
-    min-height:100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
 }
 
 .buttons {
@@ -34,6 +41,17 @@ body {
     text-align: center;
     text-decoration: none;
     display: inline-block;
+    transition-duration: 0.2s;
+}
+
+#submit:hover {
+    background-color: #31685d;
+    cursor: pointer;
+}
+
+#clear:hover {
+    background-color: #211f20;
+    cursor: pointer;
 }
 
 #submit {
@@ -41,7 +59,7 @@ body {
 }
 
 #clear {
-    background-color: #211f20;
+    background-color: #211f209d;
 }
 
 .white-box-black-border {
@@ -68,7 +86,9 @@ h1 {
     margin: 0px;
 }
 
-.label-body p, input, select {
+.label-body p,
+input,
+select {
     font-family: Space-Grotesk-Regular;
     letter-spacing: 0.015em;
     font-size: 16px;
@@ -79,7 +99,7 @@ h1 {
 .label-body {
     display: flex;
     flex-direction: column;
-    min-width: 24em;
+    width: 24em;
     gap: 0.2em;
 }
 
@@ -97,7 +117,44 @@ h1 {
     gap: 0.4em;
 }
 
-#final-doc-title {
-    padding: 0.6em 1em;
+.final-doc-title-box {
+    background-color: white;
+    border-style: solid;
+    border-color: #211f20;
+    border-width: 1px;
+    border-radius: 0.2em;
     min-height: 10em;
+    width: 24em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#final-doc-title {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.6em 1em;
+}
+
+#copy {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.6em;
+    background-color: transparent;
+    border: none;
+    padding: 0.6em 1em;
+}
+
+#copy:hover {
+    cursor: pointer;
+}
+
+#copy p {
+    font-family: Space-Grotesk-Medium;
+    color: #6a6a6a;
+}
+
+#copy-img {
+    width: 1.4em;
+    height: auto;
 }

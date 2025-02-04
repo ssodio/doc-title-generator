@@ -1,5 +1,6 @@
 const submitButton = document.getElementById('submit');
 const clearButton = document.getElementById('clear');
+const copyButton = document.getElementById('copy');
 
 submitButton.addEventListener('click', function () {
     let input1 = form.input1.value;
@@ -9,25 +10,17 @@ submitButton.addEventListener('click', function () {
     document.getElementById('final-doc-title').innerText = generatedTitle;
 });
 
-clearButton.addEventListener('click', function () {
-    document.getElementById('final-doc-title').innerText = "";
-});
-
 function generateTitle(input1, input2) {
     return input1.concat(" and " + input2);
 }
 
-function myFunction() {
-    // Get the text field
-    var copyText = document.getElementById("myInput");
+clearButton.addEventListener('click', function () {
+    document.getElementById('final-doc-title').innerText = "";
+    document.getElementById('form').reset();
+});
 
-    // Select the text field
-    copyText.select();
-    copyText.setSelectionRange(0, 99999); // For mobile devices
+copyButton.addEventListener('click', function () {
+    let copiedText = document.getElementById("final-doc-title").innerText;
 
-    // Copy the text inside the text field
-    navigator.clipboard.writeText(copyText.value);
-
-    // Alert the copied text
-    alert("Copied the text: " + copyText.value);
-} 
+    navigator.clipboard.writeText(copiedText);
+});
